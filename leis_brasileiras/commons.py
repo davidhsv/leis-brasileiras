@@ -1,6 +1,4 @@
-import re
-
+import markdownify
 
 def striphtml(html):
-    p = re.compile(r'<.*?>')
-    return p.sub('', html)
+    return markdownify.markdownify(html)

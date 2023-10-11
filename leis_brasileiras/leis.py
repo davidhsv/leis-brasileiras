@@ -317,24 +317,36 @@ class Alerj(metaclass=ABCMeta):
 
 
 class DecretosAlerj(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Alerj'
     tipo = 'DecretoInt'
     tipo_lei = 'decretos'
 
 
 class LeisOrdinariasAlerj(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Alerj'
     tipo = 'LeiOrdInt'
     tipo_lei = 'leis ordinárias'
 
 
 class LeisComplementaresAlerj(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Alerj'
     tipo = 'LeiCompInt'
     tipo_lei = 'leis complementares'
 
 
 class ProjetosDeLeiAlerj1923(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Alerj'
     dns = "http://alerjln1.alerj.rj.gov.br"
     base_url = dns + "/scpro1923.nsf/{tipo}?OpenView&Start={start}&Count=1000"
@@ -345,6 +357,9 @@ class ProjetosDeLeiAlerj1923(Alerj):
 
 
 class ProjetosDeLeiComplementarAlerj1923(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Alerj'
     dns = "http://alerjln1.alerj.rj.gov.br"
     base_url = dns + "/scpro1923.nsf/{tipo}?OpenView&Start={start}&Count=1000"
@@ -355,6 +370,9 @@ class ProjetosDeLeiComplementarAlerj1923(Alerj):
 
 
 class ProjetosDeDecretosAlerj1923(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Alerj'
     dns = "http://alerjln1.alerj.rj.gov.br"
     base_url = dns + "/scpro1923.nsf/{tipo}?OpenView&Start={start}&Count=1000"
@@ -365,6 +383,9 @@ class ProjetosDeDecretosAlerj1923(Alerj):
 
 
 class EmendasLeiOrganicaCamaraMunicipalRJ(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/contlei.nsf/'\
@@ -376,6 +397,9 @@ class EmendasLeiOrganicaCamaraMunicipalRJ(Alerj):
 
 
 class DecretosCamaraMunicipalRJ(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/contlei.nsf/'\
@@ -387,6 +411,9 @@ class DecretosCamaraMunicipalRJ(Alerj):
 
 
 class LeisOrdinariasCamaraMunicipalRJ(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/contlei.nsf/'\
@@ -398,6 +425,9 @@ class LeisOrdinariasCamaraMunicipalRJ(Alerj):
 
 
 class LeisComplementaresCamaraMunicipalRJ(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/contlei.nsf/'\
@@ -410,6 +440,9 @@ class LeisComplementaresCamaraMunicipalRJ(Alerj):
 
 # Projetos de Lei 2017-2020 CamaraRJ
 class ProjetosDeEmendasLeiOrganicaCamaraMunicipalRJ1720(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1720.nsf/Internet/'\
@@ -421,6 +454,9 @@ class ProjetosDeEmendasLeiOrganicaCamaraMunicipalRJ1720(Alerj):
 
 
 class ProjetosDeLeiCamaraMunicipalRJ1720(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1720.nsf/Internet/'\
@@ -432,6 +468,9 @@ class ProjetosDeLeiCamaraMunicipalRJ1720(Alerj):
 
 
 class ProjetosDeLeiComplementarCamaraMunicipalRJ1720(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1720.nsf/Internet/'\
@@ -443,6 +482,9 @@ class ProjetosDeLeiComplementarCamaraMunicipalRJ1720(Alerj):
 
 
 class ProjetosDeDecretoCamaraMunicipalRJ1720(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1720.nsf/Internet/'\
@@ -455,6 +497,9 @@ class ProjetosDeDecretoCamaraMunicipalRJ1720(Alerj):
 
 # Projetos de Lei Camara 2013-2016
 class ProjetosDeEmendasLeiOrganicaCamaraMunicipalRJ1316(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1316.nsf/Internet/'\
@@ -466,6 +511,9 @@ class ProjetosDeEmendasLeiOrganicaCamaraMunicipalRJ1316(Alerj):
 
 
 class ProjetosDeLeiCamaraMunicipalRJ1316(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1316.nsf/Internet/'\
@@ -477,6 +525,9 @@ class ProjetosDeLeiCamaraMunicipalRJ1316(Alerj):
 
 
 class ProjetosDeLeiComplementarCamaraMunicipalRJ1316(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1316.nsf/Internet/'\
@@ -488,6 +539,9 @@ class ProjetosDeLeiComplementarCamaraMunicipalRJ1316(Alerj):
 
 
 class ProjetosDeDecretoCamaraMunicipalRJ1316(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro1316.nsf/Internet/'\
@@ -500,6 +554,9 @@ class ProjetosDeDecretoCamaraMunicipalRJ1316(Alerj):
 
 # Projetos de Lei Camara 2009-2012
 class ProjetosDeEmendasLeiOrganicaCamaraMunicipalRJ0912(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro0711.nsf/Internet/'\
@@ -511,6 +568,9 @@ class ProjetosDeEmendasLeiOrganicaCamaraMunicipalRJ0912(Alerj):
 
 
 class ProjetosDeLeiCamaraMunicipalRJ0912(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro0711.nsf/Internet/'\
@@ -522,6 +582,9 @@ class ProjetosDeLeiCamaraMunicipalRJ0912(Alerj):
 
 
 class ProjetosDeLeiComplementarCamaraMunicipalRJ0912(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro0711.nsf/Internet/'\
@@ -533,6 +596,9 @@ class ProjetosDeLeiComplementarCamaraMunicipalRJ0912(Alerj):
 
 
 class ProjetosDeDecretoCamaraMunicipalRJ0912(Alerj):
+    def __init__(self, file_destination):
+        self.file_destination = file_destination
+
     orgao = 'Camara Municipal'
     dns = 'http://mail.camara.rj.gov.br'
     base_url = dns + '/APL/Legislativos/scpro0711.nsf/Internet/'\
